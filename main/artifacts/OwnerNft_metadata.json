@@ -251,6 +251,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -751,11 +764,11 @@
 			]
 		},
 		"main/OwnerNft.sol": {
-			"keccak256": "0x9f1569feb3dc8d67b6f49edf09f14728588f7bb7775dfc210a4d5ccd02c8b69e",
+			"keccak256": "0xe38284070106936bfe1db0f1f4dd49e6c528b0efbb4e490340c2906425dda762",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b9ce51b0920b889ab2526b7da04120b2ff098c9bd75cde08b8fbe8f07579ae3c",
-				"dweb:/ipfs/QmQrPpRX2ijCF3pMRxRxJ1SiAXZv64euD3NivrNGscGy29"
+				"bzz-raw://78d8907fc3e930793f2d1dffa3adf88a168ce1281a3b7cd28c4fba277cb00ab5",
+				"dweb:/ipfs/QmdgrZmoydeSaHiEaTDEV5SDRWNNv9W2G6K3zc9ut79BXd"
 			]
 		}
 	},

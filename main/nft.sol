@@ -13,25 +13,23 @@ OwnerNft owner_nft;
 FanNft fan_nft;
 address public owner_nft_contract;
 address public fan_nft_contract;
+address public test;
 
-
-constructor(string memory _song_name, uint32 supply,address _owner_nft_contract,address _fan_nft_contract) 
+constructor(string memory _song_name, uint32 supply) 
     {
       song_name = _song_name;
       maxSupply = supply; 
-      fan_nft   = new FanNft(song_name,supply);
+      fan_nft   = new FanNft(song_name,supply); // Erstellung eines neuen Contracts
       owner_nft = new OwnerNft(_song_name);
-      owner_nft_contract = _owner_nft_contract;
-      fan_nft_contract = _fan_nft_contract;
+      owner_nft_contract = address(owner_nft);
+      fan_nft_contract = address(fan_nft);
     }
 
 
 
 
-
 function newOwner(address owner_address ) external {
-  
-  OwnerNft(owner_nft_contract).transferOwnership(owner_address);
+  owner_nft.transferOwnership(owner_address);
 }
 
 

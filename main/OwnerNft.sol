@@ -22,5 +22,8 @@ contract OwnerNft is ERC721 {
         super._transfer(owner, new_owner, 0);
         owner = new_owner;
     }
+    function getOwner() public view returns(address){
+        return owner;
+    }
 
 }
