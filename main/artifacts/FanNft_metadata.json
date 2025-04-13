@@ -647,7 +647,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"main/nft.sol": "FanNft"
+			"main/FanNft.sol": "FanNft"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -775,12 +775,12 @@
 				"dweb:/ipfs/QmVUSvooZKEdEdap619tcJjTLcAuH6QBdZqAzWwnAXZAWJ"
 			]
 		},
-		"main/nft.sol": {
-			"keccak256": "0xe58dc462e64c5c63f739f6710d2c9611bde22a93a86e9e0d72beef5643d04a1b",
+		"main/FanNft.sol": {
+			"keccak256": "0xef89514fa099effee709a6d1750655951462ac3e8ea8d217de77a75f1a4fdaa6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://776ba668c65b4301e66975b92e53b67b192fb81a45dbf0f2a0d3d2544a73cf9d",
-				"dweb:/ipfs/QmYh9hE1VyCr3ke4mPn7YJqrRv9i5ULXgVVP7muSrWXjVi"
+				"bzz-raw://7d6503d2863029e96d1f2939778c86ba797416ff71801f3ea1e63c9e6b2d2b43",
+				"dweb:/ipfs/QmfMyEKHfyvSGDxYV1dneD3nas3bjBeX42MUmCxh76sDCa"
 			]
 		}
 	},

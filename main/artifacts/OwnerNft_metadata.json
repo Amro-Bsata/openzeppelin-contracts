@@ -421,6 +421,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "tokenID",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -609,7 +622,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"main/nft.sol": "OwnerNft"
+			"main/OwnerNft.sol": "OwnerNft"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -737,12 +750,12 @@
 				"dweb:/ipfs/QmVUSvooZKEdEdap619tcJjTLcAuH6QBdZqAzWwnAXZAWJ"
 			]
 		},
-		"main/nft.sol": {
-			"keccak256": "0xe58dc462e64c5c63f739f6710d2c9611bde22a93a86e9e0d72beef5643d04a1b",
+		"main/OwnerNft.sol": {
+			"keccak256": "0x9f1569feb3dc8d67b6f49edf09f14728588f7bb7775dfc210a4d5ccd02c8b69e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://776ba668c65b4301e66975b92e53b67b192fb81a45dbf0f2a0d3d2544a73cf9d",
-				"dweb:/ipfs/QmYh9hE1VyCr3ke4mPn7YJqrRv9i5ULXgVVP7muSrWXjVi"
+				"bzz-raw://b9ce51b0920b889ab2526b7da04120b2ff098c9bd75cde08b8fbe8f07579ae3c",
+				"dweb:/ipfs/QmQrPpRX2ijCF3pMRxRxJ1SiAXZv64euD3NivrNGscGy29"
 			]
 		}
 	},
