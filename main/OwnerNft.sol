@@ -8,8 +8,8 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 contract OwnerNft is ERC721 {
     address public owner;
     uint8 public constant tokenID = 0;
-    constructor(string memory song_name) ERC721(song_name,"OWNER_NFT") {
-        owner = msg.sender;
+    constructor(string memory song_name,address _owner) ERC721(song_name,"OWNER_NFT") {
+        owner = _owner;
         super._mint(owner, tokenID);
     }
  

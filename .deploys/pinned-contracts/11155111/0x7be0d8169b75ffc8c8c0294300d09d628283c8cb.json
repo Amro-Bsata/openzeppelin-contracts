@@ -1,0 +1,26 @@
+{
+  "name": "MyContract",
+  "address": "0x7be0d8169b75ffc8c8c0294300d09d628283c8cb",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "meinFreund",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "age",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "filePath": "openzeppelin-contracts.git/main/songs.sol",
+  "pinnedAt": 1744730327941
+}

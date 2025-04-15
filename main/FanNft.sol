@@ -12,13 +12,13 @@ contract FanNft  is ERC721 {
         uint32 token_id;
         uint32 public  max_supply;
         uint32 public available_supply;
-        uint8 max_token_per_address = 1;
         bool lock = false;
 
 
     constructor(string memory song_name, uint32 _max_supply) ERC721(song_name,"FAN_NFT")  {
         max_supply = _max_supply;
         available_supply = _max_supply;
+
     }
 
 
@@ -44,6 +44,7 @@ contract FanNft  is ERC721 {
         available_supply -= 1;
         total_supply += 1;
     }
-    
-    
+
+
+
 }
