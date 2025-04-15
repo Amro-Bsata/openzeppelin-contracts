@@ -135,6 +135,24 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint32",
+						"name": "song_id",
+						"type": "uint32"
+					},
+					{
+						"internalType": "address",
+						"name": "owner_address",
+						"type": "address"
+					}
+				],
+				"name": "newOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "next_song_id",
 				"outputs": [
@@ -380,19 +398,19 @@
 			]
 		},
 		"main/OwnerNft.sol": {
-			"keccak256": "0xe38284070106936bfe1db0f1f4dd49e6c528b0efbb4e490340c2906425dda762",
+			"keccak256": "0x09f74d243f4de598de9b82b9dfed606748af8dfef787bf74c61810e16c81f674",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://78d8907fc3e930793f2d1dffa3adf88a168ce1281a3b7cd28c4fba277cb00ab5",
-				"dweb:/ipfs/QmdgrZmoydeSaHiEaTDEV5SDRWNNv9W2G6K3zc9ut79BXd"
+				"bzz-raw://c584fbc3e4c89a0970af8e2f72ff887c9c66769691e4608e4385cc86fbd2a36c",
+				"dweb:/ipfs/QmWPcFu1BoaBjZaS8gZhcQR3jDVvUCY7uV1EvbrdNZXJPf"
 			]
 		},
 		"main/songs.sol": {
-			"keccak256": "0x6d719e18f54f822a4ccd9135f800b82161f64b64194aa8405a0ce7120796c68c",
+			"keccak256": "0xe3c35c2e0ef58610fdd9d913c528d313dd456e2faf3c0c82a3549d520442bd45",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://58b97d9c6ddcc45915854bf08beb7f6fceef6eb5fdcf075bf673b00e8f0c93f8",
-				"dweb:/ipfs/QmX7QSfqtr7HJVwananC9jjfpadizCkeXQUmSQsZP1R6zE"
+				"bzz-raw://0b104116abd859ba93c5852f946967913c26b4e4ca5aa816ae266305996d1a59",
+				"dweb:/ipfs/QmctrxXoX3wXh1TyvuYVURcmjPGtvFdf7iCPq6cFvtdLPG"
 			]
 		}
 	},

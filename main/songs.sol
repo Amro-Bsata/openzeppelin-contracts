@@ -35,7 +35,7 @@ contract Songs {
 
     function create_song(string memory song_name,string memory styles, string memory negativ_styels , string memory uri,
     uint32 fan_nft_maxSupply,uint32 copyright_nft_maxSupply,uint copyright_nft_price) public {
-        OwnerNft owner_nft = new OwnerNft(song_name);
+        OwnerNft owner_nft = new OwnerNft(song_name,msg.sender); //Todo owner
         FanNft fan_nft =  new FanNft(song_name,fan_nft_maxSupply); // Erstellung eines neuen Contracts;
         CopyRightNft copyright_nft = new CopyRightNft(song_name,copyright_nft_maxSupply,copyright_nft_price, address(owner_nft));
 
@@ -51,6 +51,13 @@ contract Songs {
              return songs[song_id];
         }
     
-    
+function newOwner(uint32 song_id,address owner_address ) external {
+    address owner_contract = songs[song_id].owner_nft_contract;
+    OwnerNft(owner_contract).transferOwnership(owner_address);
+    //songs[song_id].owner = owner_address;
+  
+}
+
+   
 }
 
