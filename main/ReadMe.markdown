@@ -2,68 +2,115 @@
 # Web3-App: AI-Supported Music Platform
 
 ## 1. Idea and Value
+This project focuses on demonstrating the potential of AI and blockchain technology within the music industry :D
 
+### 🎵 AI-Generated Music & Ownership via NFTs
 
-AI makes it possible to create music quickly using text prompts, even without musical experience. This project helps artists own and earn money from AI-generated music. The main idea is to support music creation with AI by using NFTs (ERC720 tokens) to prove ownership of each song.
+AI makes it possible to create music within minutes using simple text prompts, even without musical experience. But questions about copyright and ownership of these AI-generated songs are still open in many countries.
 
-Blockchain technology and DeFi make it easy to sell ownership. This platform will also help:
+### 🔐 Ownership and Copyright
 
-*   **Content Creators:**  They can buy "Copyright-NFTs" to legally use the songs in their content.
-*   **Fans:**  They can get "Limited FAN-NFTs" that give them access to exclusive content related to the song or artist.
+This project aims to support music creation with AI by helping creators prove ownership of their songs. Every track can be linked to a unique NFT based on the ERC-721 standard, serving as a digital certificate of ownership. This gives creators a way to protect their work and verify authorship, even when traditional copyright offices may not recognize AI-generated content.
 
-This app helps artists prove they own their AI-generated songs, since many copyright offices are currently refusing to do this (see: [Suno's help article](https://help.suno.com/en/articles/2746945)).
+### 🌐 Blockchain & Licensing
+
+Thanks to blockchain and decentralized technologies, transferring or selling music ownership is easier and more transparent. The platform will support:
+
+- **Creators**: to register and manage ownership of their AI-generated songs.
+- **Content creators**: to legally use music by purchasing **Copyright-NFTs**.
+- **Fans**: to engage through **Fan-NFTs**, which can offer access to exclusive content related to a song or artist.
+
+### 📄 Legal Context
+
+In some cases, copyright authorities do not grant protection for AI-generated works. For example, see [this article from Suno](https://help.suno.com/en/articles/2746945). This platform offers an alternative method to document and verify ownership, using blockchain instead of relying solely on traditional systems.
+
+---
+
+This approach offers a practical way to handle rights and ownership in the new landscape of AI-generated music.
 
 ## 2. Requirements
 
-### University Project Requirements
+### 🎓 University Project Requirements
 
-This application is being developed as a university project for the following courses:
+This application is being developed as part of a university project for the following courses:
 
-1.  **Aktuelle Trends der Programmierung** (Current Trends in Programming) - Prof. Dr. Thomas Ströder
-2.  **Project: WEB-App** - Prof. Dr. Christian Soltenborn
+1. **Aktuelle Trends der Programmierung**  — Prof. Dr. Thomas Ströder  
+2. **Project: WEB-App** — Prof. Dr. Christian Soltenborn
 
-Both courses are at the "Fachhochschule der Wirtschaft" (FHDW) in Bergisch Gladbach, Germany. As such, the project must satisfy the following academic requirements:
+Both courses are at the *Fachhochschule der Wirtschaft (FHDW)* in Bergisch Gladbach, Germany.
 
-*   **"Aktuelle Trends der Programmierung":** The smart contracts must be implemented using the Solidity programming language. The source code will be analyzed in a presentation to discuss the strengths and vulnerabilities of Solidity.
-*   **"WEB-App":** The application must adhere to a client-server architecture.
+To meet requirements of the courses, the project must fulfill the following:
 
-### Technical Requirements
+- **Aktuelle Trends in der Programmierung**  
+  Smart contracts must be implemented in **Solidity**. The source code will be reviewed and presented, so it should showing the strengths and vulnerabilities of the language in compare to another programming languages.
 
-*   **Song Generation:** Integration with the Suno API to allow users to generate music.
-*   **NFT Creation:** Functionality to mint NFTs associated with the generated songs.
-*   **NFT Authentication:** A specific NFT type to unequivocally authenticate song ownership.
-*   **Copyright-NFT:** An NFT type granting the holder the right to legally use the song in their content.
-*   **Smart Contract Integration:** Use of smart contracts to store ownership details and NFT metadata. Owners of specific NFTs should be able to modify certain information within the smart contract (e.g., song metadata).
-*   **TOP-Fan NFT:** An NFT tier specifically designed for top fans, providing exclusive access.
-*   **Secret Content Access:** Functionality to grant access to exclusive content areas based on TOP-Fan NFT ownership.
-*   **Secret Area Content:** The secret area could host content such as the official music video (MV) for the song.
-*   **Song Listing:** A section to browse and discover available songs on the platform.
-*   **User Profiles:** Dedicated user profile pages ("Section my profile").
+- **WEB-App**  
+  The application must follow a **client-server architecture**.
 
-**Nice-to-Have Features:**
+---
 
-*   NFT marketplace for buying and selling songs and Copyright NFTs.
-*   AI-powered music video generation.
-*   Song creation based on user-provided lyrics.
-*   AI-generated artwork for NFTs.
+### 🛠️ Technical Requirements
 
-**Non-Functional Requirements:**
+- **Song Generation**  
+  Integration with the **Suno API** to enable users to generate music.
 
-*   **Theme:** Visual design following a modern "LED theme."
-*   **Security:** Robust security measures to protect user data and smart contract integrity.
+- **NFT Creation**  
+  Functionality to **mint NFTs** linked to the generated songs.
 
-## 3. Description Context
+- **NFT Authentication**  
+  Use of a specific NFT type to authenticate song ownership.
 
-This project focuses on demonstrating the potential of AI and blockchain technology within the music industry :D
+- **Copyright-NFT**  
+  An NFT type granting the right to legally use the song in user content.
 
-## 4. Technology Stack (Preliminary)
+- **Smart Contract Integration**  
+  Smart contracts must store ownership and NFT metadata. Owners should be able to modify specific information (e.g., song metadata).
 
-The project is currently in the initial planning phase. The following are potential technology choices:
+- **TOP-Fan NFT**  
+  A special NFT tier for top fans, unlocking exclusive access.
 
-*   **Frontend:** React.js, Vue.js, or Next.js for the user interface.
-*   **Backend:** Node.js with Express.js, or Python with Flask for the API.
-*   **Data Storage:** An EVM-compatible blockchain such as Ethereum or BNB Chain for smart contract deployment and NFT management.
+- **Secret Content Access**  
+  Mechanism to grant access to exclusive areas based on TOP-Fan NFT ownership.
 
-## 5. Team
+- **Secret Area Content**  
+  Content could include exclusive items such as the official music video (MV).
+
+- **Song Listing**  
+  A section to browse and explore all songs available on the platform.
+
+- **User Profiles**  
+  Personal profile pages, e.g., **“Section my profile”**.
+
+---
+
+### ✨ Nice-to-Have Features
+
+- NFT marketplace for buying/selling songs and Copyright NFTs  
+- AI-generated music videos  
+- Song creation based on user-submitted lyrics  
+- AI-generated artwork for NFTs
+
+---
+
+### 🔐 Non-Functional Requirements
+
+- **Theme**  
+  Modern UI design based on an **LED-style theme**
+
+- **Security**  
+  Strong security practices for data protection and smart contract integrity
+
+---
+
+## 3. Technology Stack (Preliminary)
+
+The project is currently in its early planning phase. Potential technologies include:
+
+- **Frontend:** React.js, Vue.js, or Next.js  
+- **Backend:** Node.js with Express.js, or Python with Flask  
+- **Data Storage:** EVM-compatible blockchain (e.g., Ethereum or BNB Chain)
+
+---
+## 4. Team
 
 No Team is needed. I'm an Einzelkämpfer.
