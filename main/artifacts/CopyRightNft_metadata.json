@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.20+commit.a1b79de6"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -26,6 +26,11 @@
 						"internalType": "address",
 						"name": "_owner_contract_address",
 						"type": "address"
+					},
+					{
+						"internalType": "uint32",
+						"name": "_song_id",
+						"type": "uint32"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -207,6 +212,19 @@
 					}
 				],
 				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "available_supply",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenMinted",
 				"type": "event"
 			},
 			{
@@ -463,6 +481,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "song_id",
+				"outputs": [
+					{
+						"internalType": "uint32",
+						"name": "",
+						"type": "uint32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "bytes4",
@@ -685,14 +716,14 @@
 		"compilationTarget": {
 			"main/CopyRightNft.sol": "CopyRightNft"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
-			"runs": 200
+			"enabled": true,
+			"runs": 500
 		},
 		"remappings": [
 			":@openzeppelin/contracts/=contracts/"
@@ -812,19 +843,19 @@
 			]
 		},
 		"main/CopyRightNft.sol": {
-			"keccak256": "0x349fc4c856e8a1bc7352ce416ccd815b9fe7d7fcffec7527d2206f72aeabfb0c",
+			"keccak256": "0x1090225f77724568d0a49f6ca0d93412e114101c7cada4a5f2f3edc2b0cc653f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bd7ace2632ce8f124b40d784461e166dd57091c9c87613bd4db778b09e48ef44",
-				"dweb:/ipfs/QmNzpbhJRo8ZqYD2TmmaxZvFmBESnkaEMfs3HCMgkvHgM9"
+				"bzz-raw://f24420027badec66346a74cc352543af3d9dffe66e6801f5985f9947821194f3",
+				"dweb:/ipfs/QmaQPdtdfjaVJM5gkjRhREhG1h6ezhEeZUyXbqcE6XSvG2"
 			]
 		},
 		"main/OwnerNft.sol": {
-			"keccak256": "0xe38284070106936bfe1db0f1f4dd49e6c528b0efbb4e490340c2906425dda762",
+			"keccak256": "0xa3f6c99c65cdfbd64a4dcbb7558e18bbbb5bb1396ebcbf94f26823e4d00bd907",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://78d8907fc3e930793f2d1dffa3adf88a168ce1281a3b7cd28c4fba277cb00ab5",
-				"dweb:/ipfs/QmdgrZmoydeSaHiEaTDEV5SDRWNNv9W2G6K3zc9ut79BXd"
+				"bzz-raw://fa358ca0bdc2fb8d7c8705a7d9f926b972a7e79705e118c3b35b31a8da386397",
+				"dweb:/ipfs/QmbkAgA9w5yqfsLhKFNhX3KaLd9ynSHuYgWuEwpEUhRyxG"
 			]
 		}
 	},

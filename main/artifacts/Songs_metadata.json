@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.20+commit.a1b79de6"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -11,6 +11,31 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint32",
+						"name": "songId",
+						"type": "uint32"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "songName",
+						"type": "string"
+					}
+				],
+				"name": "SongCreated",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -18,14 +43,14 @@
 						"type": "string"
 					},
 					{
-						"internalType": "string",
+						"internalType": "string[]",
 						"name": "styles",
-						"type": "string"
+						"type": "string[]"
 					},
 					{
-						"internalType": "string",
+						"internalType": "string[]",
 						"name": "negativ_styels",
-						"type": "string"
+						"type": "string[]"
 					},
 					{
 						"internalType": "string",
@@ -56,6 +81,30 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "genreToSongIds",
+				"outputs": [
+					{
+						"internalType": "uint32",
+						"name": "",
+						"type": "uint32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint32",
 						"name": "song_id",
 						"type": "uint32"
@@ -76,14 +125,14 @@
 								"type": "string"
 							},
 							{
-								"internalType": "string",
+								"internalType": "string[]",
 								"name": "styles",
-								"type": "string"
+								"type": "string[]"
 							},
 							{
-								"internalType": "string",
+								"internalType": "string[]",
 								"name": "negativ_styels",
-								"type": "string"
+								"type": "string[]"
 							},
 							{
 								"internalType": "string",
@@ -137,19 +186,20 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint32",
-						"name": "song_id",
-						"type": "uint32"
-					},
-					{
-						"internalType": "address",
-						"name": "owner_address",
-						"type": "address"
+						"internalType": "string",
+						"name": "genre",
+						"type": "string"
 					}
 				],
-				"name": "newOwner",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "get_songs_by_genre",
+				"outputs": [
+					{
+						"internalType": "uint32[]",
+						"name": "",
+						"type": "uint32[]"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -183,16 +233,6 @@
 					{
 						"internalType": "string",
 						"name": "song_name",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "styles",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "negativ_styels",
 						"type": "string"
 					},
 					{
@@ -238,6 +278,24 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint32",
+						"name": "song_id",
+						"type": "uint32"
+					},
+					{
+						"internalType": "address",
+						"name": "new_owner",
+						"type": "address"
+					}
+				],
+				"name": "update_owner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -255,14 +313,14 @@
 		"compilationTarget": {
 			"main/songs.sol": "Songs"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
-			"runs": 200
+			"enabled": true,
+			"runs": 2
 		},
 		"remappings": [
 			":@openzeppelin/contracts/=contracts/"
@@ -382,35 +440,35 @@
 			]
 		},
 		"main/CopyRightNft.sol": {
-			"keccak256": "0x349fc4c856e8a1bc7352ce416ccd815b9fe7d7fcffec7527d2206f72aeabfb0c",
+			"keccak256": "0xa46f396d526d8ae1f10851dedf4bfb824fc43ea32020fbbe5dd9982892983524",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bd7ace2632ce8f124b40d784461e166dd57091c9c87613bd4db778b09e48ef44",
-				"dweb:/ipfs/QmNzpbhJRo8ZqYD2TmmaxZvFmBESnkaEMfs3HCMgkvHgM9"
+				"bzz-raw://495aeb28b78ce432a8cc39b676f610842c692b4e6da90d37c571a860f808376a",
+				"dweb:/ipfs/QmeeEgDrQx7UEZdbbAE7jHMHfGPD4seSQHyHc7ToH5gGyF"
 			]
 		},
 		"main/FanNft.sol": {
-			"keccak256": "0x87fa0a34c74f7c66520a0cad60f99fd7c81046530cd4d29cae5136d0954db296",
+			"keccak256": "0x0af8afda4b2850f95a6cca01b5994dee5d0e473c7d030353e7b63f63a79bf603",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e24f1109a845ffac7ee391583af35c58369ac2b4e46a9c1dbbcd5ab5028d530a",
-				"dweb:/ipfs/Qmc1ECdSQnmLAy3gWvpRyaiPtEKbyxTCLUUUUjJPoT3i3u"
+				"bzz-raw://bd91154f6420d91630adefadd96ff8040d7ff8e006bec0dc6f0b49638f9ba98a",
+				"dweb:/ipfs/QmZWppA5AL7dcUgKftUHDzR6phSM73C7wkv1BdzZ7N3ytW"
 			]
 		},
 		"main/OwnerNft.sol": {
-			"keccak256": "0x09f74d243f4de598de9b82b9dfed606748af8dfef787bf74c61810e16c81f674",
+			"keccak256": "0x6d2049d7590ca25f2ef328b6c99bb19133f2712b196b006078b984eeb5f32d73",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c584fbc3e4c89a0970af8e2f72ff887c9c66769691e4608e4385cc86fbd2a36c",
-				"dweb:/ipfs/QmWPcFu1BoaBjZaS8gZhcQR3jDVvUCY7uV1EvbrdNZXJPf"
+				"bzz-raw://d17713af4e15b823dce2faa36356738c695e038f796bc176dd2bc87849f9a492",
+				"dweb:/ipfs/QmVJTN7aDNa1BHDihjxN1fsGRN3tE2GqdUgenhJgAu469R"
 			]
 		},
 		"main/songs.sol": {
-			"keccak256": "0xe3c35c2e0ef58610fdd9d913c528d313dd456e2faf3c0c82a3549d520442bd45",
+			"keccak256": "0x5d5349ff5e6b1f4574c23dba080304c52b6b5351e006f20b6daec6d1e4eb860b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0b104116abd859ba93c5852f946967913c26b4e4ca5aa816ae266305996d1a59",
-				"dweb:/ipfs/QmctrxXoX3wXh1TyvuYVURcmjPGtvFdf7iCPq6cFvtdLPG"
+				"bzz-raw://be36a747a46ba2d034704d867c54dd0f2302a143ab8d4514f7f6b6617263b45d",
+				"dweb:/ipfs/QmRKEjtgDRcvkdNEfqbjV2WrScjoZA2FYrfvzxUQkZqUso"
 			]
 		}
 	},

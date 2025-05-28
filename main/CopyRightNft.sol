@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.8.20;
+pragma solidity 0.8.26;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "./OwnerNft.sol";
@@ -9,18 +9,22 @@ contract CopyRightNft is ERC721 {
 
 
         uint32 public  total_supply;
-        uint32 token_id;
+        uint32 token_id = 0;
         uint32 public  max_supply;
         uint32 public available_supply;
         uint public price;
         bool lock = false;
         address owner_contract_address;
+        uint32 public song_id;
 
-    constructor(string memory song_name, uint32 _max_supply,uint _price,address _owner_contract_address) ERC721(song_name,"COPYRIGHT_NFT")  {
+        event tokenMinted(uint available_supply);
+
+    constructor(string memory song_name, uint32 _max_supply,uint _price,address _owner_contract_address,uint32 _song_id) ERC721(song_name,"COPYRIGHT_NFT")  {
         max_supply = _max_supply;
         available_supply = _max_supply;
         price = _price;
         owner_contract_address = _owner_contract_address;
+        song_id = _song_id;
     }
 
 
@@ -70,6 +74,11 @@ contract CopyRightNft is ERC721 {
         token_id+=1;
         available_supply -= 1;
         total_supply += 1;
+        emit tokenMinted(available_supply);
+        
+        address owner = OwnerNft(owner_contract_address).getOwner();
+        payable(owner).transfer(price);
+
     }
 
 

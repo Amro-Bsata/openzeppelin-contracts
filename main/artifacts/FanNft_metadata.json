@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.20+commit.a1b79de6"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -15,6 +15,11 @@
 					{
 						"internalType": "uint32",
 						"name": "_max_supply",
+						"type": "uint32"
+					},
+					{
+						"internalType": "uint32",
+						"name": "_song_id",
 						"type": "uint32"
 					}
 				],
@@ -197,6 +202,19 @@
 					}
 				],
 				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "available_supply",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenMinted",
 				"type": "event"
 			},
 			{
@@ -427,6 +445,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "song_id",
+				"outputs": [
+					{
+						"internalType": "uint32",
+						"name": "",
+						"type": "uint32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "bytes4",
@@ -649,14 +680,14 @@
 		"compilationTarget": {
 			"main/FanNft.sol": "FanNft"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
-			"runs": 200
+			"enabled": true,
+			"runs": 500
 		},
 		"remappings": [
 			":@openzeppelin/contracts/=contracts/"
@@ -776,11 +807,11 @@
 			]
 		},
 		"main/FanNft.sol": {
-			"keccak256": "0xef89514fa099effee709a6d1750655951462ac3e8ea8d217de77a75f1a4fdaa6",
+			"keccak256": "0x0af8afda4b2850f95a6cca01b5994dee5d0e473c7d030353e7b63f63a79bf603",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7d6503d2863029e96d1f2939778c86ba797416ff71801f3ea1e63c9e6b2d2b43",
-				"dweb:/ipfs/QmfMyEKHfyvSGDxYV1dneD3nas3bjBeX42MUmCxh76sDCa"
+				"bzz-raw://bd91154f6420d91630adefadd96ff8040d7ff8e006bec0dc6f0b49638f9ba98a",
+				"dweb:/ipfs/QmZWppA5AL7dcUgKftUHDzR6phSM73C7wkv1BdzZ7N3ytW"
 			]
 		}
 	},
